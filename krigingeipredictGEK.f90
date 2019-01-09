@@ -75,8 +75,8 @@ subroutine krigingeipredictGEK(ndim,ntot,X,gtot,pts,dims,stot,H,beta,V,hyper,mto
 
   Pi=4.D0*ATAN(1.D0)
 
- call kriginfuncpredictGEK(ndim,ntot,X,gtot,pts,dims,stot,H,beta,V,hyper,mtot,Xm,Hm,Ym,covarflagi)
- call kriginfuncvarianceGEK(ndim,ntot,X,gtot,pts,dims,stot,H,beta,hyper,mtot,Xm,Hm,Sm,covarflagi)
+ call krigingfuncpredictGEK(ndim,ntot,X,gtot,pts,dims,stot,H,beta,V,hyper,mtot,Xm,Hm,Ym,covarflagi)
+ call krigingfuncvarianceGEK(ndim,ntot,X,gtot,pts,dims,stot,H,beta,hyper,mtot,Xm,Hm,Sm,covarflagi)
 
   do i=1,mtot
      if (Sm(i)<=1.D-12) then
